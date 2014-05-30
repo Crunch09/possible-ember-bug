@@ -40,7 +40,7 @@ App.TodosController = Ember.ArrayController.extend({
   lengthOfTitle: null,
   cbmethod: function(){
     console.log('cbmethod was called!');
-  }.property('lengthOfTitle'),
+  }.observes('lengthOfTitle'),
   actions: {
     createTodo: function() {
       // Get the todo title set by the "New Todo" text field
